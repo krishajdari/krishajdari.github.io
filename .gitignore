@@ -1,0 +1,15 @@
+# macOS system files (._* are created by the external drive)
+.DS_Store
+._*
+
+# Dependencies
+node_modules/
+
+# Backups of the old Framer site
+kristian-site-copy.json
+*-copy.json
+*.backup.json
+_reference/
+
+# Local editor / preview settings
+.claude/
