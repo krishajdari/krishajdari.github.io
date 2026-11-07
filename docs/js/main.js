@@ -146,7 +146,7 @@ if (!reduceMotion) {
    (the new page fades in through CSS). Email, phone, external sites,
    new-tab links and jumps within the same page are left alone. */
 
-const FADE_OUT_MS = 350;
+const FADE_OUT_MS = 200;
 
 function isPageChange(link, event) {
   if (event.defaultPrevented || event.button !== 0) return false;

@@ -77,7 +77,8 @@ body {
 }
 
 h1, h2, h3, p { margin: 0; }
-img { display: block; max-width: 100%; }
+img { display: block; max-width: 100%; height: auto; }
+picture { display: contents; } /* wrapper for the AVIF photos; adds no box of its own */
 a { color: inherit; text-decoration: none; }
 
 /* Reusable text styles */
@@ -497,11 +498,13 @@ a { color: inherit; text-decoration: none; }
   background: var(--cream);
 }
 
+/* Explicit grid places: otherwise the photo takes the third column's slot
+   and pushes the right rail onto a second row */
 .contact .rail { position: relative; z-index: 2; }
-.contact .rail--left { border: 0; }
-.contact .rail--right { color: var(--ink); }
+.contact .rail--left { grid-column: 1; grid-row: 1; border: 0; }
+.contact .rail--right { grid-column: 3; grid-row: 1; color: var(--ink); }
 
-.contact__body { position: relative; z-index: 1; padding: 40px 0 80px var(--gutter); }
+.contact__body { grid-column: 2; grid-row: 1; position: relative; z-index: 1; padding: 40px 0 80px var(--gutter); }
 
 .contact__social { display: flex; gap: 24px; }
 .contact__social a:hover { opacity: 0.7; }
@@ -542,8 +545,8 @@ a { color: inherit; text-decoration: none; }
 @keyframes page-in { from { opacity: 0; } }
 
 html { background: var(--cream); }
-body { animation: page-in 0.5s ease-out backwards; }
-html.is-leaving body { opacity: 0; transition: opacity 0.35s ease-in; }
+body { animation: page-in 0.35s ease-out backwards; }
+html.is-leaving body { opacity: 0; transition: opacity 0.2s ease-in; }
 
 /* Hero: text rises in on load, the photo follows slightly later.
    Uses `translate` so the scroll parallax can use `transform` freely. */

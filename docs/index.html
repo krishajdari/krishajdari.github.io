@@ -16,6 +16,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="images/favicon.svg">
+  <link rel="preload" as="image" href="images/hero-kristian.avif" type="image/avif" fetchpriority="high">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -41,7 +42,7 @@
         <p class="hero__name" aria-hidden="true">Kristian</p>
         <p class="hero__intro">I’m Kristian, a UI/UX designer with a background in graphic design and branding, currently studying at University of the Arts London.</p>
         <a class="hero__cta label link-accent" href="#work">See my work</a>
-        <img class="hero__image" src="images/hero-kristian.png" alt="">
+        <picture><source srcset="images/hero-kristian.avif" type="image/avif"><img class="hero__image" src="images/hero-kristian.png" alt="" width="2048" height="2048" fetchpriority="high"></picture>
       </section>
 
       <!-- Statement -->
@@ -96,7 +97,7 @@
       <!-- About -->
       <section class="about" id="about">
         <figure class="about__photo">
-          <img src="images/portrait.jpg" alt="Portrait of Kristian Hajdari">
+          <img src="images/portrait.jpg" alt="Portrait of Kristian Hajdari" width="768" height="1024" loading="lazy" decoding="async">
           <figcaption>Kristian Hajdari — 22 years old</figcaption>
         </figure>
         <div class="about__text">
@@ -104,7 +105,7 @@
           <p>I’m Kristian, a UI/UX designer in my second year at University of the Arts London. My background spans graphic design, branding, and web design, with experience across university projects, personal work, and professional settings.</p>
           <p>I’m organised and disciplined in how I work, but always open to a different perspective. I like bringing structure to a project, listening carefully, and making time for feedback.</p>
           <p>I want to keep learning from the people around me and put that learning into practice. I’m ready to ask questions, take responsibility, and help wherever I can, so I can make a meaningful contribution to both the work and the team.</p>
-          <img src="images/signature.webp" width="236" height="126" alt="Kristian Hajdari’s signature">
+          <img src="images/signature.webp" width="236" height="126" alt="Kristian Hajdari’s signature" loading="lazy" decoding="async">
         </div>
       </section>
 
@@ -118,21 +119,21 @@
 
         <div class="cards">
           <a class="card" href="projects/golden-hammer-construction.html">
-            <div class="card__media"><img src="images/golden-hammer-cover.jpg" alt="Golden Hammer Construction website on a desktop screen"></div>
+            <div class="card__media"><img src="images/golden-hammer-cover.jpg" alt="Golden Hammer Construction website on a desktop screen" width="1400" height="933" loading="lazy" decoding="async"></div>
             <div class="card__body">
               <h3 class="label">Golden Hammer Construction Ltd</h3>
               <p>Website and logo design for a construction company, from an open brief to a complete digital presence.</p>
             </div>
           </a>
           <a class="card" href="projects/auralis.html">
-            <div class="card__media"><img src="images/invisible-visible-cover.jpg" alt="Making the Invisible Visible — digital anaglyph poster"></div>
+            <div class="card__media"><img src="images/invisible-visible-cover.jpg" alt="Making the Invisible Visible — digital anaglyph poster" width="1400" height="989" loading="lazy" decoding="async"></div>
             <div class="card__body">
               <h3 class="label">Making the Invisible Visible</h3>
               <p>An anaglyph poster that reveals what really happens behind a loading screen.</p>
             </div>
           </a>
           <a class="card card--wide" href="projects/synta.html">
-            <div class="card__media"><img src="images/wellcome-cover.jpg" alt="Being Human exhibition at the Wellcome Collection"></div>
+            <div class="card__media"><img src="images/wellcome-cover.jpg" alt="Being Human exhibition at the Wellcome Collection" width="1380" height="1035" loading="lazy" decoding="async"></div>
             <div class="card__body">
               <h3 class="label">Hands-On: Tactile Interaction at the Wellcome Collection</h3>
               <p>A field study of how button-based exhibits turn museum visitors from observers into participants.</p>
@@ -151,7 +152,7 @@
 
   <!-- Footer -->
   <footer class="footer frame">
-    <img class="footer__pixels" src="images/footer-pixels.svg" alt="">
+    <img class="footer__pixels" src="images/footer-pixels.svg" alt="" width="320" height="120" loading="lazy" decoding="async">
     <div class="rail rail--left">
       <a class="vertical-up" href="contact.html">Reach out</a>
     </div>
